@@ -40,4 +40,11 @@ typedef struct {
 
 typedef int pthread_condattr_t;
 
+struct pthread_once {
+  volatile int done;
+  int started;
+};
+
+typedef struct pthread_once pthread_once_t;
+
 #endif
